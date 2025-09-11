@@ -75,10 +75,10 @@ df_reshaped = pd.read_csv('/workspaces/population-dashboard/data/us_temp-2010_20
 with st.sidebar:
     st.title('🏂 US Avarage Tempeture Dashboard')
     
-    year_list = list(df_reshaped.year.unique())[::-1]
+    year_list = list(df_reshaped.Year.unique())[::-1]
     
     selected_year = st.selectbox('Select a year', year_list)
-    df_selected_year = df_reshaped[df_reshaped.year == selected_year]
+    df_selected_year = df_reshaped[df_reshaped.Year == selected_year]
     df_selected_year_sorted = df_selected_year.sort_values(by="AverageTemperatureFahrenheit", ascending=False)
 
     color_theme_list = ['blues', 'cividis', 'greens', 'inferno', 'magma', 'plasma', 'reds', 'rainbow', 'turbo', 'viridis']
