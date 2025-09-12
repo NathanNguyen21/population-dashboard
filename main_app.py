@@ -38,7 +38,7 @@ def load_data(filepath):
 
 # Load the data using the function defined above.
 # The user must place their 'EloRatings.csv' file in the same directory.
-elo_data = load_data('/workspaces/population-dashboard/EloRatings.csv')
+elo_data = load_data('EloRatings.csv')
 
 # Main title of the dashboard
 st.title("⚽ Club Elo Ratings Dashboard")
